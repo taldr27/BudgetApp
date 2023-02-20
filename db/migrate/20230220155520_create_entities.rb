@@ -3,7 +3,8 @@ class CreateEntities < ActiveRecord::Migration[7.0]
     create_table :entities do |t|
       t.string :name
       t.decimal :amount
-      t.references :author, foreign_key: { to_table: 'users' }
+      t.references :user
+      t.references :category, foreign_key: {to_table: 'categories'}
 
       t.timestamps
     end
