@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :update_allowed_parameters, if: :devise_controller?
 
   protected
+
   def authenticate_user!
     if user_signed_in?
       super
@@ -19,5 +20,4 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :email, :avatar, :password, :current_password)
     end
   end
-
 end
