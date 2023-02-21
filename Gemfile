@@ -5,6 +5,7 @@ ruby '3.1.3'
 
 gem 'cancancan'
 gem 'devise'
+gem 'font_awesome5_rails'
 gem 'letter_opener'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
