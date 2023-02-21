@@ -1,12 +1,14 @@
 <nav class="navbar text-light nav-mobile p-2">
-  <div class="d-flex justify-content-between w-100">
+  <div class="d-flex justify-content-between w-100 align-items-center">
     <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon text-light"></span>
     </button>
     <a class="navbar-brand text-light" href="#">Categories</a>
+<%= button_to "Log out", destroy_user_session_path, class: 'btn btn-dark', method: :delete, data: { turbo: false }  %>
+
     <div></div>
   </div>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <%# <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home</a>
@@ -21,21 +23,10 @@
         <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
-  </div>
+  </div> %>
 </nav>
 
-<div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
 
 
 <h1>HELLO FROM INDEX</h1>
-<%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }  %>
