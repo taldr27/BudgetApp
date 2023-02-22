@@ -2,5 +2,5 @@
 // import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
-//= require "@fortawesome/fontawesome-free/js/all"
+// // = require "@fortawesome/fontawesome-free/js/all"
 //= require font-awesome
