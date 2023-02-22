@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get '/welcome', to: 'pages#welcome', as: 'welcome'
   root "categories#index"
-  resources :categories
+  resources :categories do
+    resources :entities
+  end
 end
