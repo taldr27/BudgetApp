@@ -20,5 +20,16 @@ RSpec.describe 'Categories Page', type: :feature do
     it 'displays the title of the app' do
       expect(page).to have_content('Create a new Category')
     end
+    it 'displays the form of creating a new category' do
+      click_on 'Create a new Category'
+      expect(page).to have_content('Category name:')
+      expect(page).to have_content('Upload a category image:')
+    end
+
+    it 'displays the form of creating a new category' do
+      click_on 'Create a new Category'
+      expect(page).to have_button("Create Category")
+    end
+
   end
 end
