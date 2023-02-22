@@ -1,27 +1,36 @@
 <nav class="navbar text-light nav-mobile p-2">
   <div class="d-flex justify-content-between w-100 align-items-center">
-<%= link_to fa_icon('arrow-left', class: 'fa-solid'), :back, class: 'btn btn-light' %>
-<img src="<%= url_for(current_user.avatar) %>" alt="User Display Image" class="img-fluid rounded-circle avatar">
-
+    <%= link_to fa_icon('arrow-left', class: 'fa-solid'), root_path, class: 'btn btn-light' %>
+    <a class="navbar-brand text-light" href="#">New Transaction</a>
+    <div class="d-flex align-items-center gap-2">
+      <img src="<%= url_for(current_user.avatar) %>" alt="User Display Image" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
+    </div>
   </div>
 </nav>
-<%= form_with model: [@category, @entity], html: {class: "form-horizontal"}, local: true do |form| %>
-  <div class="form-group">
-    <%= form.label :name, "Transaction name:", class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= form.text_field :name, class: "form-control", placeholder: "Enter the category name", value: "" %>
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <%= form_with model: [@category, @entity], html: {class: "form-horizontal d-flex flex-column"}, local: true do |form| %>
+    <div class="form-group">
+      <%= form.label :name, "Transaction name:", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :name, class: "form-control", placeholder: "Enter the category name", value: "" %>
+      </div>
     </div>
-  </div>
-    <div class="col-sm-10">
-      <%= form.number_field :amount, class: "form-control", placeholder: "Enter the amount", value: "" %>
+    <div class="form-group">
+      <%= form.label :amount, "Amount:", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= form.number_field :amount, class: "form-control", placeholder: "Enter the amount", value: "" %>
+      </div>
     </div>
-  </div>
-
-  <%= form.select :category_id, @categories .collect { |categorie| [categorie.name, categorie.id] }, { :prompt => 'Choose A category'}, class: "form-select", required: true %>
-
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= form.submit "Create Category", class: "btn btn-primary" %>
+    <div class="form-group">
+      <%= form.label :category_id, "Category:", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= form.select :category_id, @categories.collect { |categorie| [categorie.name, categorie.id] }, { :prompt => 'Choose a category' }, class: "form-select", required: true %>
+      </div>
     </div>
-  </div>
-<% end %>
+    <div class="form-group align-self-center">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= form.submit "Create Transaction", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

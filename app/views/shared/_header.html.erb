@@ -2,7 +2,8 @@
   <div class="d-flex justify-content-between w-100 align-items-center">
     <%= render "shared/hamburger" %>
     <a class="navbar-brand text-light" href="#"><%= title %></a>
-    <%= button_to "Log out", destroy_user_session_path, class: 'btn btn-dark', method: :delete, data: { turbo: false }  %>
+    <div class="d-flex align-items-center gap-2">
     <img src="<%= url_for(current_user.avatar) %>" alt="User Display Image" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
+    </div>
   </div>
 </nav>
