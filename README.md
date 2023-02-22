@@ -42,6 +42,10 @@
 - **Database where you can add categories and transactions**
 - **Implemented design from the sneak peek wireframe**
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo](https://budget-app-qrxi.onrender.com)
+
 ## 💻 Getting Started <a name="getting-started"></a>
 > To get a local copy up and running, follow these steps.
 
