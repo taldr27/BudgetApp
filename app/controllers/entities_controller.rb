@@ -1,11 +1,12 @@
 class EntitiesController < ApplicationController
   def index
-    @entities = Entity.where(:category_id => params[:category_id])
+    @entities = Entity.where(category_id: params[:category_id])
   end
+
   def new
     @entity = Entity.new
     @category = Category.find(params[:category_id])
-    @categories = Category.where(:user_id => current_user.id)
+    @categories = Category.where(user_id: current_user.id)
   end
 
   def create

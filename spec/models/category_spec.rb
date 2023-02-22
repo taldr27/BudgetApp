@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   before do
-    @user = User.create(email: "guy@gmail.com", name: 'asd', password: "111111", password_confirmation: "111111" )
+    @user = User.create(email: 'guy@gmail.com', name: 'asd', password: '111111', password_confirmation: '111111')
     @category = Category.create(user_id: @user.id, name: 'Category 1')
   end
 
