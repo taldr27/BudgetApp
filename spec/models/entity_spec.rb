@@ -4,7 +4,7 @@ RSpec.describe Entity, type: :model do
   before do
     @user = User.create(name: 'Tom', email: 'tom@yopmail.com', password: 'password')
     @category = Category.create(user_id: @user.id, name: 'Category 1')
-    @entity = Entity.create(name: 'Entity 1', amount: 3.1, user_id: 1, category_id: @category)
+    @entity = Entity.create(name: 'Entity 1', amount: 3.1, user_id: @user.id, category_id: @category.id)
     @entity.save
   end
 
