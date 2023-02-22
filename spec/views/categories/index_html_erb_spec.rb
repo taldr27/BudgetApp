@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe 'Categories Page', type: :feature do
   before(:each) do
     @user = User.create(name: 'test', email: 'tesfffft@example.com', password: 'password',
@@ -15,7 +14,6 @@ RSpec.describe 'Categories Page', type: :feature do
     visit categories_path
   end
 
-
   describe 'Welcome Page' do
     it 'displays the title of the app' do
       expect(page).to have_content('Create a new Category')
@@ -28,8 +26,7 @@ RSpec.describe 'Categories Page', type: :feature do
 
     it 'displays the form of creating a new category' do
       click_on 'Create a new Category'
-      expect(page).to have_button("Create Category")
+      expect(page).to have_button('Create Category')
     end
-
   end
 end

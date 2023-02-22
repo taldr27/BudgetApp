@@ -16,5 +16,4 @@ RSpec.describe 'Welcome Page', type: :feature do
       expect(page).to have_content('SIGN UP')
     end
   end
-
 end
