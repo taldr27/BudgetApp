@@ -3,6 +3,7 @@ class Category < ApplicationRecord
   has_many :entities
 
   validates :name, presence: true
+  validates :icon, presence: true
 
   has_one_attached :icon
 end

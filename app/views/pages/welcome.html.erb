@@ -3,7 +3,6 @@
     <div class="row p-3">
       <%= link_to "LOG IN", new_user_session_path, class: "btn btn-primary btn-block" %>
       <%= link_to "SIGN UP", new_user_registration_path, class: "btn btn-light btn-block" %>
-<%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }  %>
-
+    <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }  %>
     </div>
 </div>

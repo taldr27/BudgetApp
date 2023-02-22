@@ -9,7 +9,7 @@
   </div>
   </nav>
 
-
+<section class="d-flex flex-column p-2">
   <div class="form-label-group">
     <%= f.email_field :email, class: "form-control", autocomplete: "email", placeholder: 'Email' %>
   </div>
@@ -30,4 +30,7 @@
   
 <% end %>
 
+<div>
 <%= render "devise/shared/links" %>
+</div>
+</section>

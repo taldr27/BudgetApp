@@ -1,0 +1,22 @@
+<ul class="nav-links">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+<!-- Add this to your HTML file -->
+<div class="hamburger">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+
+<script>
+// Add this to your JavaScript file or script tag
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('clicked');
+  navLinks.classList.toggle('show');
+  // navLinks.style.display = 'block'
+});
+</script>
