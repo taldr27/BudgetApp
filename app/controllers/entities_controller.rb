@@ -17,6 +17,7 @@ class EntitiesController < ApplicationController
       @entity.category_id = @category.id
       @entity.save
     end
+    redirect_to category_entities_path(params[:category_id])
   end
 
   private

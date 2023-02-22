@@ -1,6 +1,9 @@
 <ul class="nav-links">
-    <img src="<%= url_for(current_user.avatar) %>" alt="User Display Image" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
-
+    <% if current_user.avatar.attached? %>
+      <%= image_tag current_user.avatar, class: "img-fluid rounded-circle", style: "max-width: 5em" %>
+    <% else %>
+      <%= image_tag "dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em"  %>
+    <% end %>
     <li>Categories</li>
     <li>Transactions</li>
     <li><%= button_to "Log out", destroy_user_session_path, class: 'btn btn-dark', method: :delete, data: { turbo: false }  %></li>
