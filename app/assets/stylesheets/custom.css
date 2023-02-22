@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Proxima Nova', sans-serif;
-  font-weight: 900;
 }
 
 .grid {
@@ -52,4 +51,68 @@
 .card-container {
   border: 1px solid #d5d5d5;
   background-color: white;
+}
+
+/* Add this to your CSS file */
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* Styling for the hamburger when it's clicked */
+.hamburger.clicked .line:nth-of-type(1) {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.hamburger.clicked .line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger.clicked .line:nth-of-type(3) {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.nav-links {
+  display: none; /* Hide the UL by default */
+  position: absolute;
+  background-color: #3778c2;
+  color: white;
+  top: 4.7em;
+  width: 60%;
+  height: 90vh;
+  left: 0;
+  padding: 10px;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+}
+
+.show {
+  display: block !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
