@@ -21,12 +21,17 @@
         <%= form.number_field :amount, class: "form-control", placeholder: "Enter the amount", value: "" %>
       </div>
     </div>
-    <div class="form-group">
-      <%= form.label :category_id, "Category:", class: "col-sm-2 control-label" %>
-      <div class="col-sm-10">
-        <%= form.select :category_id, @categories.collect { |categorie| [categorie.name, categorie.id] }, { :prompt => 'Choose a category' }, class: "form-select", required: true %>
-      </div>
+  <div class="form-group">
+    <%= form.label :category, "Categories:", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <% @categories.each do |category| %>
+        <%= form.fields_for :entities, Entity.new do |entity_form| %>
+          <%= entity_form.check_box :category_id, { multiple: true }, category.id, nil %>
+          <%= entity_form.label :category_id, category.name %><br>
+        <% end %>
+      <% end %>
     </div>
+  </div>
     <div class="form-group align-self-center">
       <div class="col-sm-offset-2 col-sm-10">
         <%= form.submit "Create Transaction", class: "btn btn-primary" %>

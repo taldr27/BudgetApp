@@ -1,13 +1,11 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-signin" }) do |f| %>
 <nav class="navbar text-light nav-mobile p-2">
   <div class="d-flex justify-content-between w-100 align-items-center">
-    <%= link_to fa_icon('arrow-left', class: 'fa-solid'), :back, class: 'btn btn-light' %>
-
-    <a class="navbar-brand text-light" href="#">Login</a>
-<%= f.submit "Log in", class: "btn btn-lg btn-primary btn-block" %>
-
+    <%= link_to fa_icon('arrow-left', class: 'fa-solid'), root_path, class: 'btn btn-light' %>
+<%= f.submit "Log in", class: "btn btn-lg btn-primary align-self-between" %>
   </div>
-  </nav>
+</nav>
+
 
 <section class="d-flex flex-column p-2">
   <div class="form-label-group">
