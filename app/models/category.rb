@@ -6,4 +6,12 @@ class Category < ApplicationRecord
   validates :icon, presence: true
 
   has_one_attached :icon
+
+  def self.total_amount(category)
+    total_amount = 0
+    category.entities.each do |entity|
+      total_amount += entity.amount
+    end
+    total_amount
+  end
 end

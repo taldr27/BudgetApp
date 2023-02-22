@@ -17,6 +17,8 @@
     </div>
   </div>
 
+  <%= form.select :category_id, @categories .collect { |categorie| [categorie.name, categorie.id] }, { :prompt => 'Choose A category'}, class: "form-select", required: true %>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= form.submit "Create Category", class: "btn btn-primary" %>
