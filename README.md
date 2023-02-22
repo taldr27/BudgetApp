@@ -46,6 +46,8 @@
 
 - [Live Demo](https://budget-app-qrxi.onrender.com)
 
+- [Loom Video Link](https://www.loom.com/share/63a2235bfa884ad9ba515776bdc364a8)
+
 ## 💻 Getting Started <a name="getting-started"></a>
 > To get a local copy up and running, follow these steps.
 
