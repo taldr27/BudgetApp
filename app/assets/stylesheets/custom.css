@@ -82,23 +82,24 @@
 }
 
 .nav-links {
-  display: none; /* Hide the UL by default */
+  display: none;
   position: absolute;
   background-color: #3778c2;
   color: white;
   top: 4.7em;
   width: 60%;
-  height: 90vh;
+  height: 100vh;
   left: 0;
   padding: 10px;
   list-style: none;
-  border-radius: 5px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 10000;
 }
 
 .show {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
 }
 
 a:link {
@@ -115,4 +116,10 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
 }

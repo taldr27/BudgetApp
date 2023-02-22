@@ -3,11 +3,11 @@
     <%= link_to fa_icon('arrow-left', class: 'fa-solid'), root_path, class: 'btn btn-light' %>
     <a class="navbar-brand text-light" href="#">New Transaction</a>
     <div class="d-flex align-items-center gap-2">
-          <% if current_user.avatar.attached? %>
-      <%= image_tag current_user.avatar, class: "img-fluid rounded-circle", style: "max-width: 5em" %>
-    <% else %>
-      <%= image_tag "dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em"  %>
-    <% end %>
+      <% if current_user.avatar.attached? %>
+        <%= image_tag current_user.avatar, class: "img-fluid rounded-circle", style: "max-width: 5em" %>
+      <% else %>
+        <%= image_tag "dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em"  %>
+      <% end %>
     </div>
   </div>
 </nav>
