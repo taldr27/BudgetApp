@@ -6,7 +6,7 @@
       <% if current_user.avatar.attached? %>
         <%= image_tag current_user.avatar, class: "img-fluid rounded-circle", style: "max-width: 5em" %>
       <% else %>
-        <%= image_tag "dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em"  %>
+        <%= image_tag "images/dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em"  %>
       <% end %>
     </div>
   </div>
@@ -21,7 +21,7 @@
           <% if entity.category.icon.attached? %>
             <%= image_tag entity.category.icon, class:"card-img-top", style:"max-width: 70px;" %>
           <% else %>
-            <%= image_tag "dog.webp", class:"card-img-top", style:"max-width: 70px;"  %>
+            <%= image_tag "images/dog.webp", class:"card-img-top", style:"max-width: 70px;"  %>
           <% end %>
           <div class="col-6">  
             <h5 class="card-title"><%= entity.name %></h5>
