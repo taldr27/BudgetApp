@@ -1,0 +1,39 @@
+<nav class="navbar text-light nav-mobile p-2">
+  <div class="d-flex justify-content-between w-100 align-items-center">
+    <%= link_to fa_icon('arrow-left', class: 'fa-solid'), root_path, class: 'btn btn-light' %>
+    <a class="navbar-brand text-light" href="#">Transactions</a>
+   <div class="d-flex align-items-center gap-2">
+      <% if current_user.avatar.attached? %>
+        <%= image_tag current_user.avatar, class: "img-fluid rounded-circle", style: "max-width: 5em" %>
+      <% else %>
+        <%= image_tag "images/dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em"  %>
+      <% end %>
+    </div>
+  </div>
+</nav>
+
+<div class="container d-flex flex-column p-4 background-container">
+<div class="row">
+  <% @entities.each do |entity| %>
+    <div class="col-md-4 mb-3">
+      <div class="card h-100">
+        <div class="card-body d-flex align-items-center">
+          <% if entity.category.icon.attached? %>
+            <%= image_tag entity.category.icon, class:"card-img-top", style:"max-width: 70px;" %>
+          <% else %>
+            <%= image_tag "images/dog.webp", class:"card-img-top", style:"max-width: 70px;"  %>
+          <% end %>
+          <div class="col-6">  
+            <h5 class="card-title"><%= entity.name %></h5>
+            <p class="card-text"><small class="text-muted"><%= entity.created_at.strftime('%d %b %Y') %></small></p>
+          </div>
+          <div class="col-4">
+            <p class="card-text">$<%= entity.amount %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+  <%= link_to "Create a new Transaction", new_category_entity_path, :class => 'post-button btn btn-primary align-self-center' %>
+</div>

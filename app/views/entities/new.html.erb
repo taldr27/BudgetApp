@@ -1,0 +1,45 @@
+<nav class="navbar text-light nav-mobile p-2">
+  <div class="d-flex justify-content-between w-100 align-items-center">
+    <%= link_to fa_icon('arrow-left', class: 'fa-solid'), root_path, class: 'btn btn-light' %>
+    <a class="navbar-brand text-light" href="#">New Transaction</a>
+    <div class="d-flex align-items-center gap-2">
+      <% if current_user.avatar.attached? %>
+        <%= image_tag current_user.avatar, class: "img-fluid rounded-circle", style: "max-width: 5em" %>
+      <% else %>
+        <%= image_tag "images/dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em"  %>
+      <% end %>
+    </div>
+  </div>
+</nav>
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <%= form_with model: [@category, @entity], html: {class: "form-horizontal d-flex flex-column"}, local: true do |form| %>
+    <div class="form-group">
+      <%= form.label :name, "Transaction name:", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :name, class: "form-control", placeholder: "Enter the category name", value: "" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= form.label :amount, "Amount:", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= form.number_field :amount, class: "form-control", placeholder: "Enter the amount", value: "" %>
+      </div>
+    </div>
+  <div class="form-group">
+    <%= form.label :category, "Categories:", class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <% @categories.each do |category| %>
+        <%= form.fields_for :entities, Entity.new do |entity_form| %>
+          <%= entity_form.check_box :category_id, { multiple: true }, category.id, nil %>
+          <%= entity_form.label :category_id, category.name %><br>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+    <div class="form-group align-self-center">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= form.submit "Create Transaction", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

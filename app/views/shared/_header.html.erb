@@ -1,0 +1,13 @@
+<nav class="navbar text-light nav-mobile p-2">
+  <div class="d-flex justify-content-between w-100 align-items-center">
+    <%= render "shared/hamburger" %>
+    <a class="navbar-brand text-light" href="#"><%= title %></a>
+    <div class="d-flex align-items-center gap-2">
+    <% if current_user.avatar.attached? %>
+      <%= image_tag current_user.avatar, class: "img-fluid rounded-circle", style: "max-width: 5em" %>
+    <% else %>
+      <%= image_tag "images/dog.webp", class: "img-fluid rounded-circle", style: "max-width: 5em" %>
+    <% end %>
+    </div>
+  </div>
+</nav>
