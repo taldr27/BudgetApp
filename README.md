@@ -42,6 +42,8 @@
 - **Database where you can add categories and transactions**
 - **Implemented design from the sneak peek wireframe**
 
+![image](https://github.com/taldr27/BudgetApp/assets/107952724/a3ee4185-845d-4adc-b9f2-4da21ba02b1c)
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - Coming soon!
