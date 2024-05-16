@@ -65,6 +65,13 @@ Clone this repository to your desired folder:
 Install this project with:
 ```
 - bundle install
+- rails secret
+- EDITOR="mate --wait" bin/rails credentials:edit
+-  yarn build:css --watch
+- bundle exec rails assets:precompile
+Below for Windows:
+- sh -c "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets" (In case of esbuild error)
+- bundle exec rails webpacker:install
 ```
 
 ### Usage

@@ -45,7 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_150240) do
   create_table "categories", force: :cascade do |t|
     t.bigint "user_id"
     t.string "name"
-    t.string "icon", default: "/assets/dog.webp"
+    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_categories_on_user_id"

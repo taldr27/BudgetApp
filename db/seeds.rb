@@ -10,11 +10,11 @@ Category.create(user_id: 1, name: 'Food', icon: 'sasd')
 Entity.create(name: '1', amount: 12, user_id: 1, category_id: 1)
 Entity.create(name: 'Entity 1User1', amount: 12, user_id: 1, category_id: 1)
 
-Categories:
-  - Food
-  - Games
-  - Travels
-  - etc
+# Categories:
+#   - Food
+#   - Games
+#   - Travels
+#   - etc
 
-Transactions:
-  => Food => Spent in McDonalds 18$
+# Transactions:
+#   => Food => Spent in McDonalds 18$
