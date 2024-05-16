@@ -71,7 +71,7 @@ Install this project with:
 - EDITOR="mate --wait" bin/rails credentials:edit
 - bundle exec rails assets:precompile
 
-Use // app/javascript/*.* in build script in case of fail
+Use // app/javascript/*.* in build script in case of error when compiling the assets
 ```
 
 ### Usage
