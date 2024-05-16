@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.grid {
+  height: 90vh;
+}
+
+.alerts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  color: black;
+}
+
+.nav-mobile {
+  background-color: #3778c2;
+  color: white;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.category-icon {
+  max-width: 100px;
+  min-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  object-fit: cover;
+}
+
+.card-style {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.background-container {
+  background-color: #f1f3f2;
+}
+
+.card-container {
+  border: 1px solid #d5d5d5;
+  background-color: white;
+}
+
+/* Add this to your CSS file */
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* Styling for the hamburger when it's clicked */
+.hamburger.clicked .line:nth-of-type(1) {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.hamburger.clicked .line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger.clicked .line:nth-of-type(3) {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  background-color: #3778c2;
+  color: white;
+  top: 4.7em;
+  width: 60%;
+  height: 100vh;
+  left: 0;
+  padding: 10px;
+  list-style: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+}
+
+.show {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
